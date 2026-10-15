@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.programminghut.realtime_object.VisionOverlayView
+        android:id="@+id/visionOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAliaTrigger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:backgroundTint="#4285F4"
+        app:tint="#FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/aliaUi"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E6000000"
+        android:elevation="30dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/aliaBars"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="60dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/alia_bar_blue" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/alia_bar_red" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/alia_bar_yellow" />
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="70dp"
+                android:layout_marginHorizontal="8dp"
+                android:background="@drawable/alia_bar_green" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAliaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alia"
+            android:textColor="#FFFFFF"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAliaSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="I'm listening..."
+            android:textColor="#B3FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvAliaTranscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#4285F4"
+            android:textSize="24sp"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</FrameLayout>
